@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ポケモンクイズ</title>
+</head>
+<body>    
+<h1>このポケモンの名前は？</h1>
+
+<!-- 画像表示 -->
+<img src="img/pika.png" id="pika" class="shake"> 
+
+<h2>以下の選択肢ボタンから選んでね。</h2>
+
+<!-- ボタン -->
+<div class="radio-group">
+    <div class="radio-item">
+        <input type="radio" id="radio1" name="pokemon-name" value="ピカチュウ">
+        <label for="radio1">ピカチュウ</label>
+    </div>
+    <div class="radio-item">
+        <input type="radio" id="radio2" name="pokemon-name" value="フシギダネ">
+        <label for="radio2">フシギダネ</label>
+    </div>
+    <div class="radio-item">
+        <input type="radio" id="radio3" name="pokemon-name" value="キャタピー">
+        <label for="radio3">キャタピー</label>
+    </div>
+</div>
+
+<h2>このポケモンの特徴は？</h2>
+<div class="radio-group">
+    <div class="radio-item">
+        <input type="radio" id="radio4" name="pokemon-feature" value="ほっぺが赤い">
+        <label for="radio4">ほっぺが赤い</label>
+    </div>
+    <div class="radio-item">
+        <input type="radio" id="radio5" name="pokemon-feature" value="ほっぺが青い">
+        <label for="radio5">ほっぺが青い</label>
+    </div>
+    <div class="radio-item">
+        <input type="radio" id="radio6" name="pokemon-feature" value="ほっぺが黄色い">
+        <label for="radio6">ほっぺが黄色い</label>
+    </div>
+</div>
+    
+    <div class="question-text">
+        <h2>ピカチュウのトレーナーは誰？</h2>
+        <input type="text" id="answer-input" placeholder="答えを入力してください">
+        <button id="submit-button">回答する</button>
+      </div>
+
+
+<script src="main.js"></script>
+</body>

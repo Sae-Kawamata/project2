@@ -1,0 +1,48 @@
+
+h1 {
+    background: #b0dcfa; /*背景色*/
+    padding: 0.5em;/*文字周りの余白*/
+    color: white;/*文字を白に*/
+    border-radius: 0.5em;/*角の丸み*/
+    text-align: center;
+  }
+  img{
+    width: 200px;
+    height: 200px;
+    width: 15%;
+    margin: auto;
+    display: block;
+   }
+   
+  h2 {
+    position: relative;
+    padding: 0.25em 0;
+    font-family: "Impact";
+    text-align: center;
+  }
+  h2:after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+    background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+  }
+
+  .shake {
+    animation: shake 2s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+  }
+
+.radio-group{
+  text-align: center;
+}
+
+.question-text{
+  text-align: center;
+}
