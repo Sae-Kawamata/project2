@@ -1,33 +1,31 @@
 'use strict'
 
-const btn1 = document.getElementById("btn1");
-const btn2 = document.getElementById("btn2");
-const btn3 = document.getElementById("btn3");
-const btn4 = document.getElementById("btn4");
-const btn5 = document.getElementById("btn5");
-const btn6 = document.getElementById("btn6");
+const radio1 = document.getElementById("radio1");
+const radio2 = document.getElementById("radio2");
+const radio3 = document.getElementById("radio3");
+const radio4 = document.getElementById("radio4");
+const radio5 = document.getElementById("radio5");
+const radio6 = document.getElementById("radio6");
 
 const image = document.getElementById("pika");
 
 const q1_answer = "ピカチュウ";
 
-
-//btn1のテキストを取得しselectedAnswerに格納
-btn1.addEventListener('click', () => {
-  const selectedAnswer = btn1.textContent;
-
-  //checkAnswer関数を呼び出し
+//radio1のテキストを取得しselectedAnswerに格納
+radio1.addEventListener('click', () => {
+  const selectedAnswer = radio1.textContent;
+//checkAnswer関数を呼び出し、後から使えるようにする
   checkAnswer(selectedAnswer, q1_answer);
 });
 
-btn2.addEventListener('click', () => {
-  const selectedAnswer = btn2.textContent;
+radio2.addEventListener('click', () => {
+  const selectedAnswer = radio2.textContent;
   checkAnswer(selectedAnswer, q1_answer);
 });
 
 
-btn3.addEventListener('click', () => {
-  const selectedAnswer = btn3.textContent;
+radio3.addEventListener('click', () => {
+  const selectedAnswer = radio3.textContent;
   checkAnswer(selectedAnswer, q1_answer);
 });
 
@@ -46,18 +44,18 @@ function checkAnswer(answer, correctAnswer) {
 
 const q2_answer = "ほっぺが赤い";
 
-btn4.addEventListener('click',()=>{
-  const selectAnswer = btn4.textContent;
+radio4.addEventListener('click',()=>{
+  const selectAnswer = radio4.textContent;
   checkAnswer(selectAnswer,q2_answer);
 });
 
-btn5.addEventListener(`click`,()=>{
-  const selectAnswer =btn5.textContent;
+radio5.addEventListener(`click`,()=>{
+  const selectAnswer =radio5.textContent;
   checkAnswer(selectAnswer,q2_answer);
 });
 
-btn6.addEventListener(`click`,()=>{
-  const selectAnsewer =btn6.textContent;
+radio6.addEventListener(`click`,()=>{
+  const selectAnsewer =radio6.textContent;
   checkAnswer(selectAnsewer,q2_answer);
 });
 
@@ -99,42 +97,6 @@ function checkTextAnswer(answer, correctAnswer) {
     alert("不正解!");
   }
 }
-
-
-
-// 画像の配列を定義
-const images = [
-  'images/pika1.png',
-  'images/pika2.png',
-  'images/pika3.png',
-  'images/pika4.png',
-  'images/pika5.png'
-];
-
-// 画像要素の取得
-const randomImage = document.getElementById('random-image');
-const changeButton = document.getElementById('change-button');
-
-// ランダムな画像を表示する関数
-function displayRandomImage() {
-  const randomIndex = Math.floor(Math.random() * images.length);
-  randomImage.src = images[randomIndex];
-  
-  // アニメーションクラスを追加
-  randomImage.classList.add('fade-in');
-  
-  // アニメーション終了後にクラスを削除
-  randomImage.addEventListener('animationend', () => {
-    randomImage.classList.remove('fade-in');
-  }, { once: true });
-}
-// ボタンクリック時に画像を変更
-changeButton.addEventListener('click', displayRandomImage);
-
-// ページ読み込み時に最初の画像を表示
-displayRandomImage();
-
-
 
 //画像のアニメーション
 image.addEventListener('click', () => {

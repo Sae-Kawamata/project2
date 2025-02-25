@@ -1,1 +1,11 @@
- 
+# OS関連
+.DS_Store
+Thumbs.db
+
+# エディタ関連
+.vscode/
+.idea/
+*.swp
+
+# 依存関係
+node_modules/ 
